@@ -273,7 +273,7 @@ void sprintmode(unsigned int mode, unsigned int reg, unsigned int size, char *ou
 				} break;
 			}
 		} break;
-		default : fprintf(stderr, "Mode out of range in sprintmode = %i\n", mode);
+		default : sprintf(out_s, "?"); fprintf(stderr, "Mode out of range in sprintmode = %i\n", mode);
 			break;
 	}
 }
