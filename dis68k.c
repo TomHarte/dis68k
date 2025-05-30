@@ -936,11 +936,11 @@ void disasm(unsigned long int start, unsigned long int end) {
 						if ((dir == 0) && (dmode == 3)) break;
 						if ((dir == 1) && (dmode == 4)) break;
 
-						const int data = getword();
+						int data = getword();
 						if (dmode == 4) { /* dir == 0 if dmode == 4 !! */
 							/* reverse bits in data */
 							int temp = data;
-							int data = 0;
+							data = 0;
 							for (int i = 0; i <= 15; ++i) {
 								data = (data >> 1) | (temp & 0x8000);
 								temp = temp << 1;
