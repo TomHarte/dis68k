@@ -629,7 +629,7 @@ void disasm(unsigned long int start, unsigned long int end) {
 								break;
 							case 15 : {/* BCHG_IMM */
 								sprintf(opcode_s, "BCHG");
-								const int data = getword() & 0x002F;
+								const int data = getword() & 0x00FF;
 								sprintf(source_s, "#%i", data);
 							} break;
 							case 16 : /* BCLR_DREG */
@@ -638,7 +638,7 @@ void disasm(unsigned long int start, unsigned long int end) {
 								break;
 							case 17 : {/* BCLR_IMM */
 								sprintf(opcode_s, "BCLR");
-								const int data = getword() & 0x002F;
+								const int data = getword() & 0x00FF;
 								sprintf(source_s, "#%i", data);
 							} break;
 							case 18 : /* BSET_DREG */
@@ -647,7 +647,7 @@ void disasm(unsigned long int start, unsigned long int end) {
 								break;
 							case 19 : { /* BSET_IMM */
 								sprintf(opcode_s, "BSET");
-								const int data = getword() & 0x002F;
+								const int data = getword() & 0x00FF;
 								sprintf(source_s, "#%i", data);
 							} break;
 							case 20 : /* BTST_DREG */
@@ -656,7 +656,7 @@ void disasm(unsigned long int start, unsigned long int end) {
 								break;
 							case 21 : {/* BTST_IMM */
 								sprintf(opcode_s,"BTST");
-								const int data = getword() & 0x002F;
+								const int data = getword() & 0x00FF;
 								sprintf(source_s, "#%i", data);
 							} break;
 						}
