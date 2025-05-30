@@ -336,7 +336,7 @@ void disasm(unsigned long int start, unsigned long int end) {
 							sprintf(operand_s, "D%i,D%i", sreg, dreg);
 						} else {
 							/* mem-mem */
-							sprintf(operand_s, "-(A%i),-A(%i)", sreg, dreg);
+							sprintf(operand_s, "-(A%i),-(A%i)", sreg, dreg);
 						}
 						decoded = true;
 					} break;
