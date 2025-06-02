@@ -531,9 +531,9 @@ void disasm(unsigned long int start, unsigned long int end) {
 								break;
 							case 41 : sprintf(opcode_s, "LSR.%c", size_arr[size]);
 								break;
-							case 63 : sprintf(opcode_s, "ROR.%c", size_arr[size]);
+							case 63 : sprintf(opcode_s, "ROL.%c", size_arr[size]);
 								break;
-							case 65 : sprintf(opcode_s, "ROL.%c", size_arr[size]);
+							case 65 : sprintf(opcode_s, "ROR.%c", size_arr[size]);
 								break;
 							case 67 : sprintf(opcode_s, "ROXL.%c", size_arr[size]);
 								break;
@@ -570,9 +570,9 @@ void disasm(unsigned long int start, unsigned long int end) {
 								break;
 							case 42 : sprintf(opcode_s,"LSR");
 								break;
-							case 64 : sprintf(opcode_s,"ROR");
+							case 64 : sprintf(opcode_s,"ROL");
 								break;
-							case 66 : sprintf(opcode_s,"ROL");
+							case 66 : sprintf(opcode_s,"ROR");
 								break;
 							case 68 : sprintf(opcode_s,"ROXL");
 								break;
