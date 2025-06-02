@@ -754,16 +754,16 @@ void disasm(unsigned long int start, unsigned long int end) {
 							17 - Dreg + Areg */
 						if ((dmode != 8) && (dmode != 9) && (dmode != 17)) break;
 
-						const int dreg = word & 0x0007;
-						const int areg = (word & 0x0E00) >> 9;
+						const int reg1 = (word & 0x0E00) >> 9;
+						const int reg2 = word & 0x0007;
 						sprintf(opcode_s, "EXG");
 
 						switch(dmode) {
-							case 8  : sprintf(operand_s, "D%i,D%i", dreg, areg);
+							case 8  : sprintf(operand_s, "D%i,D%i", reg1, reg2);
 								break;
-							case 9  : sprintf(operand_s, "A%i,A%i", dreg, areg);
+							case 9  : sprintf(operand_s, "A%i,A%i", reg1, reg2);
 								break;
-							case 17 : sprintf(operand_s, "D%i,A%i", dreg, areg);
+							case 17 : sprintf(operand_s, "D%i,A%i", reg1, reg2);
 								break;
 						}
 						decoded = true;
